@@ -3,7 +3,12 @@ from django.urls import include, path
 
 from . import views
 
+app_name = 'posts'
+
+
 urlpatterns = [
-    path('', views.index),
-    path('group/<slug:slug>/', views.group_posts),
+    #Главная страница
+    path('', views.index, name='index'),
+    #страница гроуплисn
+    path('group/<slug:slug>/', views.group_posts, name='group'),
 ] 
